@@ -1,0 +1,42 @@
+<div class="flex items-center justify-center px-6 py-12 lg:px-8">
+    <div class="bg-white rounded-lg p-8 max-w-xl w-full border-2 border-gray-800">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-8 text-center">Sign Up</h2>
+        <form class="space-y-6" [formGroup]="signupForm" (ngSubmit)="signup()">
+            <div>
+                <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                <input id="email" name="email" type="email" formControlName="email" autocomplete="email" required
+                       class="block w-full rounded-md border-2 border-gray-800 focus:border-sky-400 focus:ring focus:ring-sky-200 focus:ring-opacity-50 placeholder-gray-400 text-sm py-3 px-4">
+            </div>
+
+            <div>
+                <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
+                <input id="username" name="username" type="text" formControlName="username" autocomplete="username" required
+                       class="block w-full rounded-md border-2 border-gray-800 focus:border-sky-400 focus:ring focus:ring-sky-200 focus:ring-opacity-50 placeholder-gray-400 text-sm py-3 px-4">
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                <input id="password" name="password" type="password" formControlName="password" autocomplete="current-password"
+                       required
+                       class="block w-full rounded-md border-2 border-gray-800 focus:border-sky-400 focus:ring focus:ring-sky-200 focus:ring-opacity-50 placeholder-gray-400 text-sm py-3 px-4">
+            </div>
+
+            <div>
+                <label for="passwordConfirm" class="block text-sm font-medium leading-6 text-gray-900">Confirm Password</label>
+                <input id="passwordConfirm" name="passwordConfirm" type="password" formControlName="passwordConfirm" autocomplete="current-password"
+                       required
+                       class="block w-full rounded-md border-2 border-gray-800 focus:border-sky-400 focus:ring focus:ring-sky-200 focus:ring-opacity-50 placeholder-gray-400 text-sm py-3 px-4">
+            </div>
+
+            <div>
+                <button type="submit"
+                        class="w-full bg-sky-400 text-white rounded-md py-3 px-4 text-sm font-semibold hover:bg-sky-500 focus:outline-none focus:ring focus:ring-sky-200 focus:ring-opacity-50">Sign Up</button>
+            </div>
+            <div class="text-center text-sm">
+                <a routerLink="/login"
+                   class="text-gray-600 hover:text-sky-400 focus:text-sky-400 focus:outline-none focus:ring focus:ring-sky-200 focus:ring-opacity-50 ml-1">Sign
+                    In</a>
+            </div>
+        </form>
+    </div>
+</div>

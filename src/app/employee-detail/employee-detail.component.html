@@ -1,0 +1,35 @@
+<div>
+    <!-- Navbar -->
+    <div class="flex items-center justify-between p-4 bg-black">
+        <!-- Title -->
+        <h1 class="text-3xl font-semibold text-white">Employees</h1>
+
+        <!-- Return Button -->
+        <a href="/employees" class="inline-block rounded-md bg-amber-950 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+            &larr; Back to Employee List
+        </a>
+    </div>
+
+    <!-- Employee Details Card -->
+    <div class="max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-lg mt-4">
+        <div class="px-4 py-6">
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-gray-900">Full name</dt>
+                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{employee.firstName}} {{employee.lastName}}</dd>
+            </div>
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-gray-900">Email</dt>
+                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{employee.email}}</dd>
+            </div>
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-gray-900">Gender</dt>
+                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{employee.gender}}</dd>
+            </div>
+            <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="text-sm font-medium leading-6 text-gray-900">Salary</dt>
+                <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><b>$</b>{{employee.salary}}</dd>
+            </div>
+        </div>
+    </div>
+
+</div>

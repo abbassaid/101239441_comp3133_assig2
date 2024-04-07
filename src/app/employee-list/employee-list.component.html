@@ -1,0 +1,55 @@
+<div >
+    <!-- Navbar -->
+    <div class="flex items-center justify-between p-4 bg-black">
+        <!-- Title -->
+        <h1 class="text-3xl font-semibold text-white">Employees</h1>
+
+        <!-- Buttons -->
+        <div class="flex items-center space-x-4">
+            <!-- Logout Button -->
+            <a routerLink="/" class="inline-block rounded-md bg-amber-950 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                Logout
+            </a>
+
+            <!-- Add User Button -->
+            <a routerLink="/employee/add" class="inline-block rounded-md bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                Add User
+            </a>
+        </div>
+    </div>
+
+    <!-- Employee List Table -->
+    <div class="mt-8 overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-300">
+            <thead>
+            <tr>
+                <th scope="col" class="px-3 text-lg text-left font-bold">ID</th>
+                <th scope="col" class="text-lg text-left font-bold">Name</th>
+                <th scope="col" class="px-3 text-lg text-left font-bold">Email</th>
+                <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                    <span class="sr-only">Edit</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Using ngFor to iterate through every employee -->
+            <tr *ngFor="let employee of employees">
+                <td class="px-3 mt-5 pt-3 font-medium">{{employee.id}}</td>
+                <td class="mt-5 pt-3 font-medium">{{employee.firstName}} {{employee.lastName}}</td>
+                <td class="mt-5 pt-3 font-medium px-3">{{employee.email}}</td>
+                <td class="flex flex-row py-4 pl-3 pr-4 text-right text-sm gap-3">
+                    <a [routerLink]="['/employee/update', employee.id]" class="inline-block rounded-md bg-green-500 px-4 py-2 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        Update
+                    </a>
+                    <a [routerLink]="['/employee/details', employee.id]" class="inline-block rounded-md bg-sky-500 px-4 py-2 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                        Details
+                    </a>
+                    <a (click)="deleteEmployee(employee.id)" class="inline-block rounded-md bg-red-500 px-4 py-2 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

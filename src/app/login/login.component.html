@@ -1,0 +1,31 @@
+<div class="flex items-center justify-center px-6 py-12 lg:px-8">
+    <div class="bg-white rounded-lg p-8 max-w-xl w-full border-2 border-gray-800">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-8 text-center">Sign In</h2>
+        <form class="space-y-6" [formGroup]="loginForm" (ngSubmit)="login()">
+            <div>
+                <label for="username" class="block text-sm font-medium leading-6 text-gray-900">Username</label>
+                <input id="username" name="username" type="text" formControlName="username" autocomplete="username" required
+                       class="block w-full rounded-md border-2 border-gray-800 focus:border-sky-400 focus:ring focus:ring-sky-200 focus:ring-opacity-50 placeholder-gray-400 text-sm py-3 px-4">
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                <input id="password" name="password" type="password" formControlName="password" autocomplete="current-password"
+                       required
+                       class="block w-full rounded-md border-2 border-gray-800 focus:border-sky-400 focus:ring focus:ring-sky-200 focus:ring-opacity-50 placeholder-gray-400 text-sm py-3 px-4">
+            </div>
+
+            <div>
+                <button type="submit"
+                        class="w-full bg-sky-500 text-white rounded-md py-3 px-4 text-sm font-semibold hover:bg-black focus:outline-none focus:ring focus:ring-sky-200 focus:ring-opacity-50">Sign
+                    In</button>
+            </div>
+
+            <div class="text-center text-sm">
+                <a routerLink="/signup"
+                   class="text-gray-600 hover:text-sky-400 focus:text-sky-400 focus:outline-none focus:ring focus:ring-sky-200 focus:ring-opacity-50 ml-1">Sign
+                    Up</a>
+            </div>
+        </form>
+    </div>
+</div>
